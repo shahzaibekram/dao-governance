@@ -34,9 +34,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+          #Yarn command
+          cmd: install #npm install/ yarn install
       
       - name: creating build
-        run: npm build
+        run: yarn build
       
       - name: installing surge
         run: npm install -g surge
