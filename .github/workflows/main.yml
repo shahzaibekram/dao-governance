@@ -36,10 +36,10 @@ jobs:
           cmd: install # npm install/ yarn install
 
       - name: Creating build
-        run: yarn build    
+        run: npm run build    
           
       - name: Install Surge  
         run: npm install --global surge
         
       - name: deploying on surge
-        run: surge ./build http://dao-project.surge.sh/ ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build http://dao-project.surge.sh/ --token ${{ secrets.SURGE_TOKEN }}
