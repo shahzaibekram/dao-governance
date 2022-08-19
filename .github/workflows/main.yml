@@ -26,9 +26,9 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: Install NodeJS
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v3-beta
         with: 
-          version: 12
+          version: 15
           
       - uses: Borales/actions-yarn@v2.1.0
         with:
@@ -42,4 +42,4 @@ jobs:
         run: npm install --global surge
         
       - name: deploying on surge
-        run: surge ./build http://dao-project.surge.sh ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build http://dao-project.surge.sh/ ${{ secrets.SURGE_TOKEN }}
