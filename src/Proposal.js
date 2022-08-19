@@ -68,6 +68,8 @@ export default function Proposal() {
                 </Grid>
             </Box>
 
+            <h2>Recent Proposal</h2>
+
             {/* Table */}
             <div style={{ height: 260, width: '100%'}}>
                 <DataGrid
